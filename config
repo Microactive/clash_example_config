@@ -1,0 +1,34 @@
+[custom]
+;不要随意改变关键字，否则会导致出错
+
+;自定义域名规则，不同的域名走不同的策略组
+surge_ruleset=🛑 特殊网站,https://raw.githubusercontent.com/Microactive/clash_config/master/special.list
+surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/Microactive/clash_config/master/custom_not_proxy.list
+surge_ruleset=👨🏻‍💻 节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+surge_ruleset=👨🏻‍💻 节点选择,https://raw.githubusercontent.com/Microactive/clash_config/master/custom_proxy.list
+surge_ruleset=👨🏻‍💻 节点选择,https://raw.githubusercontent.com/Microactive/clash_config/master/ban_website.list
+surge_ruleset=👨🏻‍💻 节点选择,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+surge_ruleset=Ⓜ️ 微软服务,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+surge_ruleset=Ⓜ️ 微软服务,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list
+surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
+surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+surge_ruleset=🎯 全球直连,[]GEOIP,CN
+surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+surge_ruleset=🐟 漏网之鱼,[]FINAL
+
+;策略组
+custom_proxy_group=👨🏻‍💻 节点选择`select`[]🚀 故障转移`中港IEPL专线`香港`台湾`新加坡`日本`美国`[]🎯 全球直连
+custom_proxy_group=🚀 故障转移`fallback`(?=.*中港IPLC专线)(?=.*01)`(?=.*中港IPLC专线)(?=.*02)`(?=.*中港IPLC专线)(?=.*03)`(?=.*中港IPLC专线)(?=.*04)`(?=.*中港IPLC专线)(?=.*05)`新加坡`http://www.gstatic.com/generate_204`40
+custom_proxy_group=Ⓜ️ 微软服务`select`[]👨🏻‍💻 节点选择`[]🎯 全球直连
+custom_proxy_group=🛑 特殊网站`select`(?=.*新加坡)(?=.*IEPL)`(?=.*美国)(?=.*-)
+custom_proxy_group=🎯 全球直连`select`[]DIRECT
+custom_proxy_group=🐟 漏网之鱼`select`[]👨🏻‍💻 节点选择`[]🎯 全球直连
+
+;批量修改节点名称
+clash_use_new_field_name=true
+rename_node=1Gbps Netflix HBO TVB@
+rename_node=中国-香港 IEPL Equinix HK8@中港IEPL专线
+rename_node=中国-香港 IPLC Equinix HK2@中港IPLC专线
+rename_node=1Gbps HBO TVB@
