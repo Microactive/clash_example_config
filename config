@@ -22,7 +22,7 @@ surge_ruleset=🎯 全球直连,https://raw.githubusercontent.com/ACL4SSR/ACL4SS
 surge_ruleset=🐟 漏网之鱼,[]FINAL
 
 ;策略组
-custom_proxy_group=👨🏻‍💻 节点选择`select`[]🚀 故障转移`中港IEPL专线`香港`台湾`新加坡`日本`美国`[]🎯 全球直连
+custom_proxy_group=👨🏻‍💻 节点选择`select`[]🚀 故障转移`中港IEPL专线`香港`台湾`韩国`新加坡`日本`美国`[]🎯 全球直连
 custom_proxy_group=🚀 故障转移`fallback`(?=.*中港IPLC专线)(?=.*01)`(?=.*中港IPLC专线)(?=.*02)`(?=.*中港IPLC专线)(?=.*03)`(?=.*中港IPLC专线)(?=.*04)`(?=.*中港IPLC专线)(?=.*05)`新加坡`http://www.gstatic.com/generate_204`40
 custom_proxy_group=Ⓜ️ 微软服务`select`[]👨🏻‍💻 节点选择`[]🎯 全球直连
 custom_proxy_group=🛑 特殊网站`select`(?=.*新加坡)(?=.*IEPL)`美国
